@@ -1,0 +1,24 @@
+## Clock Signal (100 MHz)
+set_property PACKAGE_PIN W5 [get_ports clk]
+set_property IOSTANDARD LVCMOS33 [get_ports clk]
+create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
+
+## Reset Signal (Switch SW0)
+set_property PACKAGE_PIN V17 [get_ports rst]
+set_property IOSTANDARD LVCMOS33 [get_ports rst]
+
+## LEDs Utara-Selatan (led[0]=Hijau, led[1]=Kuning, led[2]=Merah)
+set_property PACKAGE_PIN U16 [get_ports {led[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[0]}]
+set_property PACKAGE_PIN E19 [get_ports {led[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[1]}]
+set_property PACKAGE_PIN U19 [get_ports {led[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[2]}]
+
+## LEDs Timur-Barat (led[3]=Hijau, led[4]=Kuning, led[5]=Merah)
+set_property PACKAGE_PIN V19 [get_ports {led[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[3]}]
+set_property PACKAGE_PIN W18 [get_ports {led[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[4]}]
+set_property PACKAGE_PIN U15 [get_ports {led[5]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[5]}]
